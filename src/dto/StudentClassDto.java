@@ -1,9 +1,13 @@
 package dto;
 
+import org.hibernate.validator.constraints.NotEmpty;
+
 public class StudentClassDto extends BaseDto {
 
+	@NotEmpty(message = "Class code can not be empty")
 	private String code;
 
+	@NotEmpty(message = "Class name can not be empty")
 	private String className;
 
 	public String getCode() {
